@@ -75,7 +75,7 @@ public class UseMap {
             }
         }
 
-        /*
+/*
         //create database
         connectToSqlDB.insertDataFromStringArrayListToMySql(countryList, "tbl_cell phone", "country");
         connectToSqlDB.insertDataFromStringArrayListToMySql(americanPhoneList, "tbl_americanPhoneBrand", "americanCellPhone");
@@ -92,7 +92,9 @@ public class UseMap {
         List<String> readoutotherCountryPhoneBrand = connectToSqlDB.readDataBase("tbl_otherCountryPhoneBrand", "otherCountryCellPhone");
         for(String x: readoutotherCountryPhoneBrand) System.out.print(x+ " ");
 
-         */
+
+ */
+
 
     }
 

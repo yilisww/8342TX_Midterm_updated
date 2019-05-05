@@ -56,20 +56,9 @@ public class FortuneEmployee {
 		System.out.println("Your total annual salary is :::" + firstEmployee.calculateSalary(8000));
 		System.out.println("Your total annual bonus is :::" + firstEmployee.calculateEmployeeBonus(1));
 		System.out.println("Your pension will be :::" + firstEmployee.calculateEmployeePension());
-/*
-		//Add data to DB
-		ConnectToSqlDB connectToSqlDB = new ConnectToSqlDB();
-		connectToSqlDB.insertDataFromIntArrayListToMySql(salaryList, "tbl_salary", "salary");
-		connectToSqlDB.insertDataFromIntArrayListToMySql(bonusList, "tbl_bonus", "bonus");
-
-		//read from the database
-		System.out.println("The current salary list ::::");
-		System.out.println(connectToSqlDB.readDataBase("tbl_salary", "salary"));
-		System.out.println("The current bonus list ::::");
-		System.out.println(connectToSqlDB.readDataBase("tbl_bonus", "bonus"));
 
 
-		 */
+
 
 
 	}

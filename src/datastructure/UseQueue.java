@@ -13,32 +13,30 @@ public class UseQueue {
          *
          */
 
-        Queue<String> ticketOffice = new LinkedList<>();  // FIFO
+        Queue<String> ticket = new LinkedList<>();  // FIFO
 
-        ticketOffice.add("New England Patriots");
-        ticketOffice.add("Detroit Lions");
-        ticketOffice.add("Dallas Cowboys");
-        ticketOffice.add("Houston Texan");
-        ticketOffice.add("New York Giants");
-        ticketOffice.add("Indianapolis Colts");
+        ticket.add("New England Patriots");
+        ticket.add("Detroit Lions");
+        ticket.add("Dallas Cowboys");
+        ticket.add("Houston Texan");
+        ticket.add("New York Giants");
+        ticket.add("Indianapolis Colts");
 
-
-        System.out.println("The NFL teams we love: ");
-        for (String x : ticketOffice) System.out.print(x + ", ");
+        for (String x : ticket) System.out.print(x + ", ");
         System.out.println();
 
         System.out.println();
-        System.out.println("take a peek:::" + ticketOffice.peek());  //FIFO
-        ticketOffice.remove(4);            //FIFO -- "New York Giants" is removed
+        System.out.println("take a peek::: the best NFL team is : " + ticket.peek());
+        ticket.remove(4);            //FIFO -- "New York Giants" is removed
 
-        System.out.println("The NFL teams we really love: ");
-        for (String x : ticketOffice) System.out.print(x + ", ");
+        System.out.println("\n"+"The NFL teams we really love: ");
+        for (String x : ticket) System.out.print(x + ", ");
         System.out.println();
 
         System.out.println();
-        System.out.println("NFL pool()::::" );  //poll() == peek() and remove()
+        System.out.println("NFL pool()::::" );
 
-        Iterator it = ticketOffice.iterator();
+        Iterator it = ticket.iterator();
         while (it.hasNext()) System.out.print("\n"+it.next()+",");
 
 

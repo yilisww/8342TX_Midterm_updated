@@ -4,6 +4,10 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Stack;
 
 public class DataReader {
 
@@ -40,6 +44,41 @@ public class DataReader {
         } catch (FileNotFoundException e) {
             System.out.println("file not found!");
         }
+
+
+        FileReader fileReader = new FileReader(path);
+        BufferedReader bufferedReader = new BufferedReader(fileReader);
+
+        // Stack words
+        String str = bufferedReader.readLine();
+        String[] words = str.split("\\W+");
+
+        Stack<String> wordStack = new Stack();
+        for (int i = 0; i < words.length; i++) {
+            wordStack.push(words[i]);
+        }
+
+
+        //Demonstrate how to use Stack that includes push,peek,search,pop elements.
+
+        System.out.println("\n"+"peek function : "+ wordStack.peek());
+        wordStack.push("Push a word ");
+        System.out.println("\n"+"peek function after push: "+ wordStack.peek());
+        wordStack.pop();
+        System.out.println("\n"+"peek function after pop: "+ wordStack.peek());
+        System.out.println("\n"+"search the word - cars: "+ wordStack.search("cars"));
+        System.out.println();
+
+         // Linkedlist words  - data retrieve
+        List<String> wordLinkedList = new LinkedList<>();
+
+        for (int i = 0; i < words.length; i++) {
+            wordLinkedList.add(i, words[i]);
+        }
+
+        Iterator<String> it = wordLinkedList.iterator();
+        while(it.hasNext()) System.out.print(it.next()+" ");
+        System.out.println();
 
     }
 

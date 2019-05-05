@@ -74,10 +74,17 @@ public class UseArrayList {
         System.out.println("The first word of the list2 is : " + list3.firstElement());
         System.out.println("The last word of the list2 is : " + list3.lastElement());
 
+      try {
         //add to database
         ConnectToSqlDB connectToSqlDB = new ConnectToSqlDB();
         connectToSqlDB.insertDataFromStringArrayListToMySql(list3, "word", "language");
 
+        List<String> readout = connectToSqlDB.readDataBase("tbl_cityList", "cityName");
+        for(String y: readout) System.out.print(y+ " ");
+
+      } catch (Exception e) {
+          e.printStackTrace();
+      }
 
 
     }
